@@ -1,13 +1,15 @@
 import express from "express";
-import { userLogin} from "../controller/userController.js";
+import { userLogin, userProfile,registerUser,updateUserProfile} from "../controller/userController.js";
+import {protect} from "../middleware/authMiddleware.js"
 
 
 const router = express.Router();
 
 
-// get user by id 
+//login user and generate token
 
-router.post("/login",userLogin)
-
+router.post("/login",userLogin);
+router.get("/profile", protect, userProfile).put("/profile",protect,updateUserProfile);
+router.post("/register",registerUser);
 
 export default router;

@@ -3,7 +3,7 @@
 const notFound = (req,res,next) => {
     res.status(404)
     res.json({message:`Page not found - ${req.originalUrl}`})
-    next(error);
+    next();
 }
 const errorMiddleware = (err,req,res,next) =>{
     const statusCode = res.statusCode==200?500:res.statusCode;

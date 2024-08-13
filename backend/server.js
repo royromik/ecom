@@ -9,6 +9,7 @@ dotenv.config();
 connectDb();
 
 const app = express();
+//body parser
 app.use(express.json());
 
 //routes

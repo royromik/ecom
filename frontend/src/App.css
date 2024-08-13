@@ -1,0 +1,25 @@
+main{
+  min-height: 80vh;
+}
+
+.rating .fas {
+  color: #ffc335;
+}
+
+.pagination .active{
+   border: 2px solid rgb(51, 49, 49);
+}
+
+.page-btn a{
+  background-color: grey;
+   color: white;
+}
+.page-link{
+  display: inline !important;
+  margin-left:0px !important
+}
+
+.page-link:hover{
+  cursor: pointer;
+  background-color: rgb(184, 178, 178)!important;
+}
